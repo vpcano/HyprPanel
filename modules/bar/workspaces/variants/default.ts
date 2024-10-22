@@ -30,6 +30,7 @@ export const defaultWses = (monitor: number): BoxWidget => {
                     .map((i, index) => {
                         return Widget.Button({
                             class_name: 'workspace-button',
+                            cursor: 'pointer',
                             on_primary_click: () => {
                                 hyprland.messageAsync(`dispatch workspace ${i}`);
                             },

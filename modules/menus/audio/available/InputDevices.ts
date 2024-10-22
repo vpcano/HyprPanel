@@ -27,6 +27,7 @@ const renderInputDevices = (inputDevices: Stream[]): InputDevices => {
         return Widget.Button({
             on_primary_click: () => (audio.microphone = device),
             class_name: `menu-button audio input ${device}`,
+            cursor: 'pointer',
             child: Widget.Box({
                 children: [
                     Widget.Box({

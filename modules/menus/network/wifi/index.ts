@@ -44,6 +44,7 @@ const Wifi = (): BoxWidget => {
                         vpack: 'center',
                         hpack: 'end',
                         class_name: 'menu-icon-button search network',
+                        cursor: 'pointer',
                         on_primary_click: () => {
                             startRotation();
                             network.wifi.scan();

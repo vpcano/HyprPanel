@@ -6,7 +6,7 @@ import Label from 'types/widgets/label';
 import { Attribute, Child } from './widget';
 
 export type BarBoxChild = {
-    component: Box<Gtk.Widget, unknown>;
+    component: Button<Gtk.Widget, unknown>;
     isVisible?: boolean;
     isVis?: Variable<boolean>;
     boxClass: string;

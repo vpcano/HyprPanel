@@ -53,6 +53,7 @@ const Controls = (getPlayerInfo: () => MprisPlayer): BoxWidget => {
                                             foundPlayer.shuffle();
                                         };
                                         self.class_name = `media-indicator-control-button shuffle ${isShuffleActive(foundPlayer)} ${foundPlayer.shuffle_status !== null ? 'enabled' : 'disabled'}`;
+                                        self.cursor = (foundPlayer.shuffle_status!==null) ? 'pointer' : "default";
                                     });
                                 },
                                 child: Widget.Icon(icons.mpris.shuffle['enabled']),
@@ -76,6 +77,7 @@ const Controls = (getPlayerInfo: () => MprisPlayer): BoxWidget => {
                                             foundPlayer.previous();
                                         };
                                         self.class_name = `media-indicator-control-button prev ${foundPlayer.can_go_prev !== null && foundPlayer.can_go_prev ? 'enabled' : 'disabled'}`;
+                                        self.cursor = (foundPlayer.can_go_prev !== null && foundPlayer.can_go_prev) ? 'pointer' : "default";
                                     });
                                 },
                             }),
@@ -97,6 +99,7 @@ const Controls = (getPlayerInfo: () => MprisPlayer): BoxWidget => {
                                             foundPlayer.playPause();
                                         };
                                         self.class_name = `media-indicator-control-button play ${foundPlayer.can_play !== null ? 'enabled' : 'disabled'}`;
+                                        self.cursor = (foundPlayer.can_play!==null) ? 'pointer' : "default";
                                     });
                                 },
                                 child: Widget.Icon({
@@ -135,6 +138,7 @@ const Controls = (getPlayerInfo: () => MprisPlayer): BoxWidget => {
                                             foundPlayer.next();
                                         };
                                         self.class_name = `media-indicator-control-button next ${foundPlayer.can_go_next !== null && foundPlayer.can_go_next ? 'enabled' : 'disabled'}`;
+                                        self.cursor = (foundPlayer.can_go_next !== null && foundPlayer.can_go_next) ? 'pointer' : "default";
                                     });
                                 },
                             }),
@@ -164,6 +168,7 @@ const Controls = (getPlayerInfo: () => MprisPlayer): BoxWidget => {
                                             foundPlayer.loop();
                                         };
                                         self.class_name = `media-indicator-control-button loop ${isLoopActive(foundPlayer)} ${foundPlayer.loop_status !== null ? 'enabled' : 'disabled'}`;
+                                        self.cursor = (foundPlayer.loop_status !== null) ? 'pointer' : "default";
                                     });
                                 },
                                 child: Widget.Icon({

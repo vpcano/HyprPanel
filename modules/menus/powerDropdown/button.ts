@@ -36,6 +36,7 @@ export const PowerButton = (action: PowerOptions): GButton => {
             return `power-menu-button ${action} ${!shwLbl ? 'no-label' : ''}`;
         }),
         on_clicked: () => handleClick(action),
+        cursor: 'pointer',
         child: Widget.Box({
             vertical: false,
             children: showLabel.bind('value').as((shwLbl) => {

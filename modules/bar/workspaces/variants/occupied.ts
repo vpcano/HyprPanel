@@ -100,6 +100,7 @@ export const occupiedWses = (monitor: number): BoxWidget => {
                         }
                         return Widget.Button({
                             class_name: 'workspace-button',
+                            cursor: 'pointer',
                             on_primary_click: () => {
                                 hyprland.messageAsync(`dispatch workspace ${i}`);
                             },

@@ -62,6 +62,7 @@ const EnergyProfiles = (): BoxWidget => {
                             class_name: powerProfiles.bind('active_profile').as((active) => {
                                 return `power-profile-item ${active === prof.Profile ? 'active' : ''}`;
                             }),
+                            cursor: 'pointer',
                             child: Widget.Box({
                                 children: [
                                     Widget.Icon({

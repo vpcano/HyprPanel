@@ -9,6 +9,7 @@ import options from 'options.js';
 const SysButton = (action: Action, label: string): GButton =>
     Widget.Button({
         class_name: `widget-button powermenu-button-${action}`,
+        cursor: 'pointer',
         on_clicked: () => powermenu.action(action),
         child: Widget.Box({
             vertical: true,

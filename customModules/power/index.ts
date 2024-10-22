@@ -14,6 +14,7 @@ export const Power = (): BarBoxChild => {
         textIcon: icon.bind('value'),
         boxClass: 'powermodule',
         props: {
+            onPrimaryClick: () => {},   // just to recognize its clickable
             setup: (self: Button<Child, Attribute>) => {
                 inputHandler(self, {
                     onPrimaryClick: {

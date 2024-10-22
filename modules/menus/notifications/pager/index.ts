@@ -29,6 +29,7 @@ export const NotificationPager = (curPage: Variable<number>): BoxWidget => {
                         hexpand: true,
                         hpack: 'start',
                         class_name: `pager-button left ${currentPage <= 1 ? 'disabled' : ''}`,
+                        cursor: 'pointer',
                         onPrimaryClick: () => {
                             curPage.value = 1;
                         },
@@ -41,6 +42,7 @@ export const NotificationPager = (curPage: Variable<number>): BoxWidget => {
                         hexpand: true,
                         hpack: 'start',
                         class_name: `pager-button left ${currentPage <= 1 ? 'disabled' : ''}`,
+                        cursor: 'pointer',
                         onPrimaryClick: () => {
                             curPage.value = currentPage <= 1 ? 1 : currentPage - 1;
                         },
@@ -59,6 +61,7 @@ export const NotificationPager = (curPage: Variable<number>): BoxWidget => {
                         hexpand: true,
                         hpack: 'end',
                         class_name: `pager-button right ${currentPage >= Math.ceil(notifs.notifications.length / dispTotal) ? 'disabled' : ''}`,
+                        cursor: 'pointer',
                         onPrimaryClick: () => {
                             const maxPage = Math.ceil(notifs.notifications.length / displayedTotal.value);
                             curPage.value = currentPage >= maxPage ? currentPage : currentPage + 1;
@@ -72,6 +75,7 @@ export const NotificationPager = (curPage: Variable<number>): BoxWidget => {
                         hexpand: true,
                         hpack: 'end',
                         class_name: `pager-button right ${currentPage >= Math.ceil(notifs.notifications.length / dispTotal) ? 'disabled' : ''}`,
+                        cursor: 'pointer',
                         onPrimaryClick: () => {
                             const maxPage = Math.ceil(notifs.notifications.length / displayedTotal.value);
                             curPage.value = maxPage;

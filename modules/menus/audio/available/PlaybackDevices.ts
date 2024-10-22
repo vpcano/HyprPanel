@@ -19,6 +19,7 @@ const renderPlaybacks = (playbackDevices: Stream[]): PlaybackDevices => {
         }
         return Widget.Button({
             class_name: `menu-button audio playback ${device}`,
+            cursor: 'pointer',
             on_primary_click: () => (audio.speaker = device),
             child: Widget.Box({
                 children: [

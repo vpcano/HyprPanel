@@ -30,6 +30,7 @@ const Controls = (notifs: Notifications): BoxWidget => {
                 children: [
                     Widget.Switch({
                         class_name: 'menu-switch notifications',
+                        cursor: 'pointer',
                         vpack: 'center',
                         active: notifs.bind('dnd').as((dnd: boolean) => !dnd),
                         on_activate: ({ active }) => {
@@ -47,6 +48,7 @@ const Controls = (notifs: Notifications): BoxWidget => {
                             Widget.Button({
                                 className: 'clear-notifications-button',
                                 tooltip_text: 'Clear Notifications',
+                                cursor: 'pointer',
                                 on_primary_click: clearDelay.bind('value').as((delay) => {
                                     return () => {
                                         if (removingNotifications.value) {

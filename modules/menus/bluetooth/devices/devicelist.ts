@@ -70,6 +70,7 @@ const devices = (bluetooth: Bluetooth, self: Box<Gtk.Widget, unknown>): Box<Chil
                         Widget.Button({
                             hexpand: true,
                             class_name: `bluetooth-element-item ${device}`,
+                            cursor: 'pointer',
                             on_primary_click: () => {
                                 if (!conDevNames.includes(device.address)) device.setConnection(true);
                             },

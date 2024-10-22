@@ -52,6 +52,13 @@
 
     $bar-button-background-hover-opacity-ratio: $bar-buttons-background_hover_opacity * 0.01;
     $transparency-value-hover: 1 - $bar-button-background-hover-opacity-ratio;
+    .bar_item_box_visible.bar_item_box_hover {
+        &.#{$class} {
+            &:hover {
+                opacity: $bar-buttons-background_hover_opacity * 0.01;
+            }
+        }
+    }
     .bar_item_box_visible {
         &.#{$class} {
             background: transparentize($labelBackground, $transparency-value);
@@ -66,7 +73,7 @@
             }
 
             &:hover {
-                opacity: $bar-buttons-background_hover_opacity * 0.01;
+                // opacity: $bar-buttons-background_hover_opacity * 0.01;
             }
         }
     }

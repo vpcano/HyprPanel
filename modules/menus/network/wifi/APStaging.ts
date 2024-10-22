@@ -85,6 +85,7 @@ const renderWapStaging = (
                         Widget.Button({
                             hpack: 'end',
                             class_name: 'close-network-password-input-button',
+                            cursor: 'pointer',
                             on_primary_click: () => {
                                 connecting.value = '';
                                 staging.value = {} as AccessPoint;

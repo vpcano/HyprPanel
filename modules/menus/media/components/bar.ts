@@ -14,6 +14,7 @@ const Bar = (getPlayerInfo: (media: Mpris) => MprisPlayer): BoxWidget => {
                     hexpand: true,
                     tooltip_text: '--',
                     class_name: 'menu-slider media progress',
+                    cursor: 'pointer',
                     draw_value: false,
                     on_change: ({ value }) => {
                         const foundPlayer = getPlayerInfo(media);

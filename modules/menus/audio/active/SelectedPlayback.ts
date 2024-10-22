@@ -11,6 +11,7 @@ const renderActivePlayback = (): Box<Child, Attribute>[] => {
                 Widget.Button({
                     vexpand: false,
                     vpack: 'end',
+                    cursor: 'pointer',
                     setup: (self) => {
                         const updateClass = (): void => {
                             const spkr = audio.speaker;
@@ -47,6 +48,7 @@ const renderActivePlayback = (): Box<Child, Attribute>[] => {
                         Widget.Slider({
                             value: audio['speaker'].bind('volume'),
                             class_name: 'menu-active-slider menu-slider playback',
+                            cursor: 'pointer',
                             draw_value: false,
                             hexpand: true,
                             min: 0,

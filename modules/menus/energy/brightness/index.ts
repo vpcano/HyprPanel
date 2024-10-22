@@ -36,6 +36,7 @@ const Brightness = (): BoxWidget => {
                             vexpand: true,
                             value: brightness.bind('screen'),
                             class_name: 'menu-active-slider menu-slider brightness',
+                            cursor: 'pointer',
                             draw_value: false,
                             hexpand: true,
                             min: 0,

@@ -14,6 +14,7 @@ const Controls = (): BoxWidget => {
         children: [
             Widget.Button({
                 tooltip_text: 'Toggle Wifi',
+                cursor: 'pointer',
                 expand: true,
                 setup: (self) => {
                     self.hook(network, () => {
@@ -32,6 +33,7 @@ const Controls = (): BoxWidget => {
             }),
             Widget.Button({
                 tooltip_text: 'Toggle Bluetooth',
+                cursor: 'pointer',
                 expand: true,
                 class_name: bluetooth
                     .bind('enabled')
@@ -44,6 +46,7 @@ const Controls = (): BoxWidget => {
             }),
             Widget.Button({
                 tooltip_text: 'Toggle Notifications',
+                cursor: 'pointer',
                 expand: true,
                 class_name: notifications
                     .bind('dnd')
@@ -56,6 +59,7 @@ const Controls = (): BoxWidget => {
             }),
             Widget.Button({
                 tooltip_text: 'Toggle Mute (Playback)',
+                cursor: 'pointer',
                 expand: true,
                 on_primary_click: () => (audio.speaker.is_muted = !audio.speaker.is_muted),
                 setup: (self) => {
@@ -82,6 +86,7 @@ const Controls = (): BoxWidget => {
             }),
             Widget.Button({
                 tooltip_text: 'Toggle Mute (Microphone)',
+                cursor: 'pointer',
                 expand: true,
                 on_primary_click: () => (audio.microphone.is_muted = !audio.microphone.is_muted),
                 setup: (self) => {

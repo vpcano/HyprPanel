@@ -28,6 +28,7 @@ const label = (bluetooth: Bluetooth): BoxWidget => {
                 children: [
                     Widget.Switch({
                         class_name: 'menu-switch bluetooth',
+                        cursor: 'pointer',
                         hexpand: true,
                         hpack: 'end',
                         active: bluetooth.bind('enabled'),
@@ -44,6 +45,7 @@ const label = (bluetooth: Bluetooth): BoxWidget => {
                     Widget.Button({
                         vpack: 'center',
                         class_name: 'menu-icon-button search',
+                        cursor: 'pointer',
                         on_primary_click: () => {
                             startRotation();
                             Utils.execAsync(['bash', '-c', 'bluetoothctl --timeout 120 scan on']).catch((err) => {

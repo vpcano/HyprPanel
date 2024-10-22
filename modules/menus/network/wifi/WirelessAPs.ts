@@ -126,6 +126,7 @@ const renderWAPs = (
                                     });
                             },
                             class_name: 'network-element-item',
+                            cursor: 'pointer',
                             child: Widget.Box({
                                 hexpand: true,
                                 children: [
@@ -181,6 +182,7 @@ const renderWAPs = (
                             child: Widget.Button({
                                 tooltip_text: 'Delete/Forget Network',
                                 class_name: 'menu-icon-button network disconnect',
+                                cursor: 'pointer',
                                 on_primary_click: () => {
                                     connecting.value = ap.bssid || '';
                                     Utils.execAsync('nmcli connection show --active').then(() => {

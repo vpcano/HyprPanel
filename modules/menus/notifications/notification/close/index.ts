@@ -5,6 +5,7 @@ import Label from 'types/widgets/label';
 export const CloseButton = (notif: Notification, notifs: Notifications): Button<Label<Attribute>, Attribute> => {
     return Widget.Button({
         class_name: 'close-notification-button menu',
+        cursor: 'pointer',
         on_primary_click: () => {
             notifs.CloseNotification(notif.id);
         },

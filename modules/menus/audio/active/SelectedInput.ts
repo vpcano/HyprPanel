@@ -11,6 +11,7 @@ const renderActiveInput = (): Box<Child, Attribute>[] => {
                 Widget.Button({
                     vexpand: false,
                     vpack: 'end',
+                    cursor: 'pointer',
                     setup: (self) => {
                         const updateClass = (): void => {
                             const mic = audio.microphone;
@@ -54,6 +55,7 @@ const renderActiveInput = (): Box<Child, Attribute>[] => {
                         Widget.Slider({
                             value: audio.microphone.bind('volume').as((v) => v),
                             class_name: 'menu-active-slider menu-slider inputs',
+                            cursor: 'pointer',
                             draw_value: false,
                             hexpand: true,
                             min: 0,

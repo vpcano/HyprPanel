@@ -106,6 +106,7 @@ const Shortcuts = (): BoxWidget => {
                 tooltip_text: shortcut.tooltip.value,
                 class_name: className,
                 on_primary_click: () => handleClick(shortcut.command.value),
+                cursor: 'pointer',
                 child: Widget.Label({
                     class_name: 'button-label txt-icon',
                     label: shortcut.icon.value,
@@ -117,6 +118,7 @@ const Shortcuts = (): BoxWidget => {
                 vexpand: true,
                 tooltip_text: shortcut.tooltip,
                 class_name: className,
+                cursor: 'pointer',
                 on_primary_click: (_, event) => {
                     if (shortcut.command === 'settings-dialog') {
                         App.closeWindow('dashboardmenu');

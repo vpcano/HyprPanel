@@ -14,6 +14,7 @@ import OSD from 'modules/osd/index';
 App.config({
     onConfigParsed: () => Utils.execAsync(`python3 ${App.configDir}/services/bluetooth.py`),
     windows: [...MenuWindows, Notifications(), SettingsDialog(), ...forMonitors(Bar), OSD()],
+    cursorTheme: 'Adwaita',
     closeWindowDelay: {
         sideright: 350,
         launcher: 350,

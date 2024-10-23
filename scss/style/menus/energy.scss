@@ -14,12 +14,42 @@
 .menu-items-container.energy {
   min-width: 18em * $bar-menus-menu-battery-scaling * 0.01;
 
-  .menu-label {
-    color: if($bar-menus-monochrome, $bar-menus-label, $bar-menus-menu-battery-label-color);
-  }
-
   .menu-label-container {
     background: if($bar-menus-monochrome, $bar-menus-cards, $bar-menus-menu-battery-card-color);
+
+    .menu-label {
+      color: if($bar-menus-monochrome, $bar-menus-label, $bar-menus-menu-battery-label-color);
+    }
+
+    .controls-container {
+      margin: 0.5em 1em;
+    }
+  }
+
+  .menu-switch.nightlight {
+    background-color: if($bar-menus-monochrome, $bar-menus-switch-disabled, $bar-menus-menu-bluetooth-switch-disabled);
+
+    &:checked {
+      background: if($bar-menus-monochrome, $bar-menus-switch-enabled, $bar-menus-menu-bluetooth-switch-enabled);
+    }
+
+    slider {
+      background-color: if($bar-menus-monochrome, $bar-menus-switch-puck, $bar-menus-menu-bluetooth-switch-puck);
+    }
+
+    &:hover {
+      trough {
+        background: if($bar-menus-monochrome, $bar-menus-switch-disabled, $bar-menus-menu-bluetooth-switch-disabled);
+      }
+
+      slider {
+        background: if($bar-menus-monochrome, $bar-menus-switch-puck, $bar-menus-menu-bluetooth-switch-puck);
+      }
+    }
+
+    &:active {
+      background: if($bar-menus-monochrome, $bar-menus-switch-enabled, $bar-menus-menu-bluetooth-switch-enabled);
+    }
   }
 
   .uptime {
@@ -66,18 +96,21 @@
     }
   }
 
-  .brightness-container {
+  .brightness-container 
+  .nightlight-container {
     padding-bottom: 1em;
   }
 
-  .brightness-slider-icon {
+  .brightness-slider-icon,
+  .nightlight-slider-icon {
     font-size: 1.4em;
     min-width: 1em;
     min-height: 1em;
     color: if($bar-menus-monochrome, $bar-menus-icons-active, $bar-menus-menu-battery-icons-active);
   }
 
-  .brightness-slider-label {
+  .brightness-slider-label,
+  .nightlight-slider-label {
     color: if($bar-menus-monochrome, $bar-menus-text, $bar-menus-menu-battery-text);
     font-size: 0.9em;
     min-width: 2.5em;
@@ -85,7 +118,8 @@
     margin-bottom: 0.2em;
   }
 
-  .menu-slider.brightness {
+  .menu-slider.brightness,
+  .menu-slider.nightlight {
     trough {
       background: if($bar-menus-monochrome, $bar-menus-slider-background, $bar-menus-menu-battery-slider-background);
 

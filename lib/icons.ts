@@ -98,6 +98,7 @@ export default {
         indicator: 'display-brightness-symbolic',
         keyboard: 'keyboard-brightness-symbolic',
         screen: 'display-brightness-symbolic',
+        nightlight: 'weather-clear-night-symbolic',
     },
     powermenu: {
         sleep: 'weather-clear-night-symbolic',

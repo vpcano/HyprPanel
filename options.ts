@@ -989,7 +989,7 @@ const options = mkOptions(OPTIONS, {
                 label: opt(true),
                 labelType: opt<KbLabelType>('code'),
                 icon: opt('󰌌'),
-                leftClick: opt(''),
+                leftClick: opt('$HOME/.config/ags/scripts/toggleKeyboardLayout.sh'),
                 rightClick: opt(''),
                 middleClick: opt(''),
                 scrollUp: opt(''),

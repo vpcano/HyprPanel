@@ -89,11 +89,17 @@ const Nightlight = (): BoxWidget => {
                 child: Widget.Box({
                     class_name: 'nightlight-container',
                     children: [
-                        Widget.Icon({
-                            vexpand: true,
+                        // Widget.Icon({
+                        //     vexpand: true,
+                        //     vpack: 'center',
+                        //     class_name: 'nightlight-slider-icon',
+                        //     icon: icons.brightness.nightlight,
+                        // }),
+                        Widget.Label({
                             vpack: 'center',
-                            class_name: 'nightlight-slider-icon',
-                            icon: icons.brightness.nightlight,
+                            vexpand: true,
+                            class_name: 'nightlight-slider-icon txt-icon',
+                            label: '󰤄',
                         }),
                         CustomSlider(),
                         Widget.Label({
